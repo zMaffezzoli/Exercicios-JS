@@ -3,9 +3,9 @@ function Calendar(){
     let hour = info.substring(16,24)
     let date = info.substring(4,15).replace(/ /g, "/")
 
-    let years = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
  
-    date = date.substring(4,7) + (years.indexOf(date.substring(0,3)) + 1) + date.substring(6);
+    date = date.substring(4,7) + (months.indexOf(date.substring(0,3)) + 1) + date.substring(6);
 
     return {"hour": hour, "date": date};
 };
