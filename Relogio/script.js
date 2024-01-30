@@ -1,12 +1,8 @@
 function Calendar(){
-    let info = Date()
-    let hour = info.substring(16,24)
-    let date = info.substring(4,15).replace(/ /g, "/")
-
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    let info = new Date()
+    let hour = String(info).substring(16,24)
+    let date = info.toLocaleDateString('pt-BR')
  
-    date = date.substring(4,7) + (months.indexOf(date.substring(0,3)) + 1) + date.substring(6);
-
     return {"hour": hour, "date": date};
 };
 
